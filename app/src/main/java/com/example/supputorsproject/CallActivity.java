@@ -183,8 +183,6 @@ public class CallActivity extends Activity implements AppRTCClient.SignalingEven
 
   // Controls
   private CallFragment callFragment;
-  private HudFragment hudFragment;
-  private CpuMonitor cpuMonitor;
 
   @Override
   // TODO(bugs.webrtc.org/8580): LayoutParams.FLAG_TURN_SCREEN_ON and
@@ -209,7 +207,6 @@ public class CallActivity extends Activity implements AppRTCClient.SignalingEven
     pipRenderer = findViewById(R.id.pip_video_view);
     fullscreenRenderer = findViewById(R.id.fullscreen_video_view);
     callFragment = new CallFragment();
-    hudFragment = new HudFragment();
 
     // Show/hide call control fragment on view click.
     View.OnClickListener listener = new View.OnClickListener() {
@@ -345,18 +342,13 @@ public class CallActivity extends Activity implements AppRTCClient.SignalingEven
         new AppRTCClient.RoomConnectionParameters(roomUri.toString(), roomId, loopback, urlParameters);
 
     // Create CPU monitor
-    if (CpuMonitor.isSupported()) {
-      cpuMonitor = new CpuMonitor(this);
-      hudFragment.setCpuMonitor(cpuMonitor);
-    }
+
 
     // Send intent arguments to fragments.
     callFragment.setArguments(intent.getExtras());
-    hudFragment.setArguments(intent.getExtras());
     // Activate call and HUD fragments and start the call.
     FragmentTransaction ft = getFragmentManager().beginTransaction();
     ft.add(R.id.call_fragment_container, callFragment);
-    ft.add(R.id.hud_fragment_container, hudFragment);
     ft.commit();
 
     // For command line execution run connection for <runTimeMs> and exit.
@@ -486,9 +478,7 @@ public class CallActivity extends Activity implements AppRTCClient.SignalingEven
     if (peerConnectionClient != null && !screencaptureEnabled) {
       peerConnectionClient.stopVideoSource();
     }
-    if (cpuMonitor != null) {
-      cpuMonitor.pause();
-    }
+
   }
 
   @Override
@@ -499,9 +489,7 @@ public class CallActivity extends Activity implements AppRTCClient.SignalingEven
     if (peerConnectionClient != null && !screencaptureEnabled) {
       peerConnectionClient.startVideoSource();
     }
-    if (cpuMonitor != null) {
-      cpuMonitor.resume();
-    }
+
   }
 
   @Override
@@ -559,10 +547,8 @@ public class CallActivity extends Activity implements AppRTCClient.SignalingEven
     FragmentTransaction ft = getFragmentManager().beginTransaction();
     if (callControlFragmentVisible) {
       ft.show(callFragment);
-      ft.show(hudFragment);
     } else {
       ft.hide(callFragment);
-      ft.hide(hudFragment);
     }
     ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
     ft.commit();
@@ -957,7 +943,6 @@ public class CallActivity extends Activity implements AppRTCClient.SignalingEven
       @Override
       public void run() {
         if (!isError && connected) {
-          hudFragment.updateEncoderStatistics(reports);
         }
       }
     });
