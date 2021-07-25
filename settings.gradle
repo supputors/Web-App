@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name='SupputorsProject'
+rootProject.name='WebRTC-Kotlin-Sample2'

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "48527238768",
+    "project_id": "webrtc-kotlin",
+    "storage_bucket": "webrtc-kotlin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:48527238768:android:bbb1d7328ccb6bfb54b6b5",
+        "android_client_info": {
+          "package_name": "com.example.webrtc_kotlin_sample2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "48527238768-144s87rea2bmqfbvq960khs8csp7s3po.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDVQrWf80gb22UoxADW_kJdmE2o52r_VU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "48527238768-144s87rea2bmqfbvq960khs8csp7s3po.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
