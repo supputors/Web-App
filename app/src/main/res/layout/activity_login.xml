@@ -66,7 +66,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="아이디"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#000000"
                         android:textColorHint="#D3D3D3"
                         android:background="@drawable/black_border"
                         android:textStyle="bold"

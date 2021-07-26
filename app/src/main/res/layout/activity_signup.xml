@@ -37,7 +37,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/user_id"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textColorHint="#D3D3D3"
                 android:background="@drawable/black_border"
                 android:textStyle="bold"
@@ -47,7 +47,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/user_nick"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textColorHint="#D3D3D3"
                 android:background="@drawable/black_border"
                 android:textStyle="bold"
@@ -61,7 +61,7 @@
                 android:ems="10"
                 android:hint="@string/user_pw"
                 android:inputType="textPassword"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textColorHint="#D3D3D3"
                 android:background="@drawable/black_border"
                 android:textStyle="bold"
@@ -72,7 +72,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/user_name"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textColorHint="#D3D3D3"
                 android:background="@drawable/black_border"
                 android:textStyle="bold"
@@ -101,22 +101,24 @@
             </RadioGroup>
 
             <EditText
+                android:inputType="number"
                 android:id="@+id/signup_birth"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/user_birth"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textColorHint="#D3D3D3"
                 android:background="@drawable/black_border"
                 android:textStyle="bold"
                 android:padding="4dp"/>
 
             <EditText
+                android:inputType="number"
                 android:id="@+id/signup_phone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/user_phone"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textColorHint="#D3D3D3"
                 android:background="@drawable/black_border"
                 android:textStyle="bold"
@@ -125,6 +127,7 @@
         </LinearLayout>
 
         <Button
+            android:id="@+id/btn_signup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -132,7 +135,7 @@
             android:textColor="#FFFFFF"
             android:textStyle="bold"
             android:textSize="18dp"
-            android:background="@color/colorPrimaryDark"/>
+            android:backgroundTint="@color/colorPrimaryDark" />
 
     </LinearLayout>
 
