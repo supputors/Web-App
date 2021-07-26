@@ -19,7 +19,8 @@ ___
 
 * Signup Layout
 
-![Signup](./image/Sighup.png)
+![Signup](./image/Signup.png)
 
 * Home
+
 ![menu](./image/menu.png)
