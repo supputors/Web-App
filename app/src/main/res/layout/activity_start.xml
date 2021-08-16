@@ -17,11 +17,13 @@
         android:textSize="75dp"
         android:textStyle="bold"
         android:textColor="#FFFFFF"/>
+
     <com.google.android.material.card.MaterialCardView
         android:layout_below="@+id/tx_title"
         android:layout_width="match_parent"
         app:cardCornerRadius="16dp"
         app:cardBackgroundColor="@color/teal_700"
+        android:background="@color/teal_700"
         android:layout_height="wrap_content">
         <LinearLayout
             android:orientation="vertical"
@@ -58,6 +60,7 @@
                     android:textColor="@color/teal_700"
                     android:layout_weight="1"
                     app:backgroundTint="@color/white"
+                    android:background="@color/white"
                     android:text="Start Call"
                     android:layout_height="wrap_content"/>
                 <com.google.android.material.button.MaterialButton
@@ -70,6 +73,7 @@
                     android:layout_weight="1"
                     android:textColor="@color/teal_700"
                     app:backgroundTint="@color/white"
+                    android:background="@color/white"
                     android:text="Join Call"
                     android:layout_height="wrap_content"/>
             </LinearLayout>

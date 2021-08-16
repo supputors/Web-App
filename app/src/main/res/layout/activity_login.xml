@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".LoginActivity"
     android:orientation="vertical"
     android:background="@drawable/bg">
 
@@ -78,7 +78,7 @@
                         android:layout_height="wrap_content"
                         android:hint="비밀번호"
                         android:inputType="textPassword"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#000000"
                         android:textColorHint="#D3D3D3"
                         android:background="@drawable/black_border"
                         android:textStyle="bold"
@@ -119,7 +119,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/login"
                     android:textColor="#FFFFFF"
-                    android:background="@color/colorPrimaryDark"
+                    android:backgroundTint="@color/colorPrimaryDark"
                     android:textStyle="bold"
                     android:textSize="18dp"
                     />
@@ -130,7 +130,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/signup"
                     android:textColor="#FFFFFF"
-                    android:background="@color/colorPrimaryDark"
+                    android:backgroundTint="@color/colorPrimaryDark"
                     android:textStyle="bold"
                     android:textSize="18dp"/>
             </LinearLayout>
